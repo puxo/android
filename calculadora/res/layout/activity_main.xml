@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#66cccc" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Ingrese operador 1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginLeft="44dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:ems="10"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="22dp"
+        android:background="#66cccc" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Ingrese operador 2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginLeft="44dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:ems="10"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dividir"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_marginBottom="55dp"
+        android:background="#66cccc" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="37dp"
+            android:text="Resultado"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/resul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="37dp"
+            android:text="____________"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#ccddff" >
+
+        <Button
+            android:id="@+id/sumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/restar"
+            android:layout_alignBottom="@+id/restar"
+            android:onClick="Sumar"
+            android:text="Sumar" />
+
+        <Button
+            android:id="@+id/restar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dividir"
+            android:layout_marginBottom="19dp"
+            android:layout_toRightOf="@+id/resul"
+             android:onClick="Restar"
+            android:text="Restar" />
+
+        <Button
+            android:id="@+id/multiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/linearLayout4"
+            android:layout_alignTop="@+id/linearLayout4"
+             android:onClick="Multiplicar"
+            android:text="Multiplicar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#ccddff" >
+
+        <Button
+            android:id="@+id/dividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/resul"
+            android:layout_centerVertical="true"
+             android:onClick="Dividir"
+            android:text="Dividir" />
+
+        <Button
+            android:id="@+id/limpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dividir"
+             android:onClick="Limpiar"
+            android:text="Limpiar" />
+    </LinearLayout>
+
+</RelativeLayout>
